@@ -1,1 +1,1 @@
-# Zoom Label With SameS tructure
+# Zoom Label With Same Structure
