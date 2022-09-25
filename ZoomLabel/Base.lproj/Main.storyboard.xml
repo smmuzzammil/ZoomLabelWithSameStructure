@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZoomLabel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ply-ms-Bi3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAA-Ck-sLD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KXa-SH-uuO">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ch3-uE-hmC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmP-9K-jn1">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="31"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="minus.square.fill" catalog="system" title="Remove"/>
+                                        <connections>
+                                            <action selector="removeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yci-4K-eCg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CY-HL-uCG">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="31"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus.square.fill" catalog="system" title="Add"/>
+                                        <connections>
+                                            <action selector="addButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wtc-OU-qHw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ply-ms-Bi3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AZX-gN-lth"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ply-ms-Bi3" secondAttribute="trailing" id="TOX-vm-BED"/>
+                            <constraint firstItem="QAA-Ck-sLD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="TWz-VD-faU"/>
+                            <constraint firstItem="QAA-Ck-sLD" firstAttribute="bottom" secondItem="ch3-uE-hmC" secondAttribute="bottom" constant="10" id="W33-oy-5AG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ch3-uE-hmC" secondAttribute="trailing" id="ZO7-wi-XkI"/>
+                            <constraint firstItem="ch3-uE-hmC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="flH-xj-xZR"/>
+                            <constraint firstItem="QAA-Ck-sLD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ikz-SX-k8v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QAA-Ck-sLD" secondAttribute="trailing" id="khu-eu-SoJ"/>
+                            <constraint firstItem="ch3-uE-hmC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="noR-WS-2w3"/>
+                            <constraint firstItem="Ply-ms-Bi3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tc4-AH-OPg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ply-ms-Bi3" secondAttribute="bottom" id="yaZ-c5-gRE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="zoomLabelView" destination="Ply-ms-Bi3" id="BvD-dh-rDN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4.3478260869565224" y="38.839285714285715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="minus.square.fill" catalog="system" width="128" height="114"/>
+        <image name="plus.square.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
